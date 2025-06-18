@@ -28,16 +28,64 @@ public partial class MainWindow : Window
 
     private void MainEventTimer(object? sender, EventArgs e)
     {
+        Score.Content = $"Score: {score}";
+        flappyBirdHitBox = new Rect(Canvas.GetLeft(flappyBird), Canvas.GetTop(flappyBird), flappyBird.Width, flappyBird.Height);
+        Canvas.SetTop(flappyBird, Canvas.GetTop(flappyBird) + gravity);
         
+        if(Canvas.GetTop(flappyBird) < -10 || Canvas.GetTop(flappyBird) > 458)
+        {
+            EndGame();
+        }
+        foreach (var x in Canvas.Children.OfType<Image>())
+        {
+            if ((string)x.Tag == "pipe1" || (string)x.Tag == "pipe2" || (string)x.Tag == "pipe3")
+            {
+                Canvas.SetLeft(x, Canvas.GetLeft(x) - 5);
+
+                if (Canvas.GetLeft(x) < -100)
+                {
+                    Canvas.SetLeft(x, 800);
+                    score += 0.5;
+                    
+                }
+                
+                Rect pipeHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
+
+                if (flappyBirdHitBox.IntersectsWith(pipeHitBox))
+                {
+                    EndGame();
+                }
+            }
+            if ((string)x.Tag == "cloud")
+            {
+                Canvas.SetLeft(x, Canvas.GetLeft(x) - 2);
+
+                if (Canvas.GetLeft(x) < -250)
+                {
+                    Canvas.SetLeft(x, 550);
+                }
+            }
+        }
     }
 
     private void OnKeyDown(object sender, KeyEventArgs e)
     {
+        if (e.Key == Key.Space)
+        {
+            flappyBird.RenderTransform = new RotateTransform(-20, flappyBird.Width / 2, flappyBird.Height / 2);
+            gravity = -8;
+        }
         
+        if (e.Key == Key.R && gameOver == true)
+        {
+            StartGame();
+        }
     }
 
     private void OnKeyUp(object sender, KeyEventArgs e)
     {
+        flappyBird.RenderTransform = new RotateTransform(5, flappyBird.Width / 2, flappyBird.Height / 2);
+        gravity = 8;
     }
 
     private void StartGame()
