@@ -12,11 +12,12 @@ public class Layer
             Neurons[i] = new Neuron(inputCountPerNeuron);
         }
 
-        double[] FeedForward(double[] inputs)
-        {
-            return Neurons.Select(n => n.Activate(inputs)).ToArray();
-        }
         
         
+        
+    }
+    public double[] FeedForward(double[] inputs)
+    {
+        return Neurons.Select(n => n.Activate(inputs)).ToArray();
     }
 }
