@@ -131,3 +131,5 @@ public partial class MainWindow : Window
         Score.Content += "\nGame Over. \nPress R to restart";
     }
 }
+
+

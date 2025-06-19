@@ -6,21 +6,27 @@
         xmlns:local="clr-namespace:Flappy_Bird"
         mc:Ignorable="d"
         Title="Flappy Bird" Height="490" Width="525">
-    <Canvas Name="Canvas" Focusable="True" KeyDown="OnKeyDown" KeyUp="OnKeyUp" Background="LightBlue">
+    
+    <Grid>
+        <Canvas Name="Canvas" Focusable="True" KeyDown="OnKeyDown" KeyUp="OnKeyUp" Background="LightBlue">
         
-        <Image Height="145" Width="200" Source="images/clouds.png" Tag="cloud" Canvas.Left="30" Canvas.Top="0"></Image>
-        <Image Height="145" Width="200" Source="images/clouds2.png" Tag="cloud" Canvas.Right="15" Canvas.Top="0"></Image>
-        <Image Height="390" Width="66" Source="images/pipeBottom.png" Tag="pipe1" Canvas.Left="106" Canvas.Top="364"></Image>
-        <Image Height="390" Width="66" Source="images/pipeTop.png" Tag="pipe1" Canvas.Left="106" Canvas.Top="-160"></Image>
-        <Image Height="390" Width="66" Source="images/pipeBottom.png" Tag="pipe2" Canvas.Left="269" Canvas.Top="204"></Image>
-        <Image Height="390" Width="66" Source="images/pipeTop.png" Tag="pipe2" Canvas.Left="269" Canvas.Top="-320"></Image>
-        <Image Height="390" Width="66" Source="images/pipeBottom.png" Tag="pipe3" Canvas.Left="433" Canvas.Top="315"></Image>
-        <Image Height="390" Width="66" Source="images/pipeTop.png" Tag="pipe3" Canvas.Left="433" Canvas.Top="-228"></Image>
+            <Image Height="145" Width="200" Source="images/clouds.png" Tag="cloud" Canvas.Left="30" Canvas.Top="0"></Image>
+            <Image Height="145" Width="200" Source="images/clouds2.png" Tag="cloud" Canvas.Right="15" Canvas.Top="0"></Image>
+            <Image Height="390" Width="66" Source="images/pipeBottom.png" Tag="pipe1" Canvas.Left="106" Canvas.Top="364"></Image>
+            <Image Height="390" Width="66" Source="images/pipeTop.png" Tag="pipe1" Canvas.Left="106" Canvas.Top="-160"></Image>
+            <Image Height="390" Width="66" Source="images/pipeBottom.png" Tag="pipe2" Canvas.Left="269" Canvas.Top="204"></Image>
+            <Image Height="390" Width="66" Source="images/pipeTop.png" Tag="pipe2" Canvas.Left="269" Canvas.Top="-320"></Image>
+            <Image Height="390" Width="66" Source="images/pipeBottom.png" Tag="pipe3" Canvas.Left="433" Canvas.Top="315"></Image>
+            <Image Height="390" Width="66" Source="images/pipeTop.png" Tag="pipe3" Canvas.Left="433" Canvas.Top="-228"></Image>
         
-        <Image Name="flappyBird" Height="36" Width="50" Source="images/flappyBird.png" Stretch="Fill" Canvas.Left="25" Canvas.Top="261"></Image>
+            <Image Name="flappyBird" Height="36" Width="50" Source="images/flappyBird.png" Stretch="Fill" Canvas.Left="25" Canvas.Top="261"></Image>
         
-        <Label Name="Score" FontSize="22" FontWeight="ExtraBold" Content="Score: 0" ></Label>
+            <Label Name="Score" FontSize="22" FontWeight="ExtraBold" Content="Score: 0" ></Label>
         
         
-    </Canvas>
+        </Canvas>
+        <StackPanel x:Name="NeuralPanel" Orientation="Vertical" HorizontalAlignment="Right" Margin="10"/>
+    </Grid>
+
+   
 </Window>

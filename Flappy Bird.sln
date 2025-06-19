@@ -2,8 +2,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flappy Bird", "Flappy Bird\Flappy Bird.csproj", "{B674FCF4-122A-476D-AA68-D947A5FECA73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlappyBirdNNetwork", "FlappyBirdNNetwork\FlappyBirdNNetwork.csproj", "{82DF61C5-E942-47A6-B0A9-9DFFC63CCD52}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,10 +12,6 @@ Global
 		{B674FCF4-122A-476D-AA68-D947A5FECA73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B674FCF4-122A-476D-AA68-D947A5FECA73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B674FCF4-122A-476D-AA68-D947A5FECA73}.Release|Any CPU.Build.0 = Release|Any CPU
-		{82DF61C5-E942-47A6-B0A9-9DFFC63CCD52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{82DF61C5-E942-47A6-B0A9-9DFFC63CCD52}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{82DF61C5-E942-47A6-B0A9-9DFFC63CCD52}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{82DF61C5-E942-47A6-B0A9-9DFFC63CCD52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
